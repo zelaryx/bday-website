@@ -1,1 +1,78 @@
-<h1> Hello! </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Space+Mono&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="fixed-element">
+        <a href="#">happy birthday</a>
+        <ul class="list">
+        <li><a href="#">letters</a></li>
+        <li><a href="#">coupons</a></li>
+        <li><a href="#">gift</a></li>
+        </ul>
+        <!-- <button class="search">Search</button> -->
+        <button class="menu">Menu</button>
+    </nav>
+
+    <img class="main-image" src="images/party.JPG" alt="">
+
+    <div class="center-container">
+        <h1>i love you! here are some of my favorite pictures of us.</h1>
+        <div class="square-image-container">
+            <img class="clicky-image" src="images/zombie.jpeg" alt="">
+        </div>
+    </div>
+
+    <script>
+        // wait for the entire document to be loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // wait for the image to load 
+            // problem: image only loads at the beginning, not upon resizing
+            var mainImage = document.querySelector('.main-image');
+            var clickyImage = document.querySelector('.clicky-image');
+
+            mainImage.addEventListener('load', function () {
+                // get the image height
+                var imageHeight = mainImage.clientHeight;
+                // console.log('Image Height:', imageHeight);
+                
+                const fixedElement = document.querySelector('.fixed-element');
+    
+                window.addEventListener('scroll', () => {
+                    // console.log('scrollY:', window.scrollY);
+                    if (window.scrollY > imageHeight-111) { // 111
+                        fixedElement.style.position = 'absolute';
+                    } else {
+                        fixedElement.style.position = 'fixed';
+                    }
+                });
+
+                var imagePaths = [
+                        'images/zombie.jpeg',
+                        'images/ur-sexy.jpg',
+                        'images/festive.jpg',
+                        'images/skydiving.jpg',
+                        'images/clue.png'
+                ];
+
+                var idx = 1;
+
+                clickyImage.addEventListener('click', function () {
+                    clickyImage.src = imagePaths[idx];
+                    idx = (idx + 1) % imagePaths.length;
+                });
+
+            });
+        });
+    </script>
+
+</body>
+</html>
