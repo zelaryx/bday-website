@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter</title>
+    <link rel="stylesheet" href="letter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Handlee&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="fixed-element">
+        <a href="index.html">happy birthday</a>
+        <ul class="list">
+        <li><a href="letter.html">letter</a></li>
+        <li><a href="coupons.html">coupons</a></li>
+        <li><a href="#">gift</a></li>
+        </ul>
+        <!-- <button class="search">Search</button> -->
+        <!-- <button class="menu">Menu</button> -->
+    </nav>
+    <img class="main-image" src="images/letter-main-cropped.png" alt="">
+
+    <div class="contents">
+
+        <!-- envelope -->
+        <div class="envelope" onclick="togglePopup()">
+            <div class="envelope-body">
+                <div class="back-fold"></div>
+                <div class="letter">
+                    <div class="letter-body"></div>
+                    <div class="letter-title"></div>
+                    <div class="letter-context"></div>
+                    <div class="letter-stamp">
+                        <div class="letter-stamp-inner"></div>
+                    </div>
+                </div>
+                <div class="top-fold"></div>
+                <div class="body"></div>
+                <div class="left-fold"></div>
+                <div class="hearts">
+                    <div class="heart1"></div>
+                    <div class="heart2"></div>
+                    <div class="heart3"></div>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+
+        <!-- actual letter -->
+        <div class="popup" id="popupletter">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <h1>Happy Birthday <3</h1>
+                <p class="letter-contents">to my babe: <br><br>
+                    happy 21st! i bet you've been waiting for this moment all your life hahah.
+                    now you can finally skip the long drive to pantry and just go across the street to county to get your alc fix.
+                    even though you'll probably still take Toad (lazy ass)...<br><br>
+
+                    it's crazy how just a year ago, you were a complete stranger to me, and now you hold
+                    such a significant place in my heart :0 now i get to witness and celebrate one of the important milestones in your life.
+                    from now on, i'm excited to celebrate each passing year with you, and grow and mature with you. i know you said you've
+                    never been big on birthday celebrations before, from now on i want to make you feel as special as possible on your
+                    birthday. i want you to know how glad i am that you were born this day so many years ago. you, my best friend and biggest
+                    fan, but also my biggest hater... <br><br>
+
+                    i know we may have our disagreements and our different ways of expressing love but yk what? i still accept it all. i love
+                    the person you were born as and i promise i'll love you for a long time (unless you like cheat on me or try to kill me or
+                    something but i know ofc you won't do that LOL). and i promise i'll always accept you and care for you even if you change,
+                    especially as you change, because i think that's really what it means to love someone. <br><br>
+                    
+                    i don't need reasons why i love you, like how we are just so comfortable around each other, or your sense of humor and how
+                    you laugh at the dumbest things and i find that so cute, or how you're trying to love me the way i want to be loved too.
+                    i mean, yeah, all of these are what make our relationship, but at the end of the day i will still love you even if you don't
+                    laugh at the same childish jokes anymore or even if one day we may stop being stupid around each other and being comfortable
+                    doing so.<br><br>
+                    
+                    i just simply love you because you are you. i choose you as my person, and you will always deserve to be loved.<br><br>
+
+                    so, today's all about celebrating you! i hope you have an amazing day and enjoy your last day at home, and once you get back
+                    to chicago we'll celebrate you with me there this time. i haven't seen you in ages and i can't wait to see you tomorrow heheh
+                    <br><br>
+
+                    i love you bb. have the best 21st birthday.<br><br><br>
+
+                </p>
+                <p class="letter-contents"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function togglePopup() {
+            document.getElementById("popupletter").classList.toggle("active");
+        }
+        window.addEventListener('scroll', function () {
+            var letterContent = document.querySelector('.content');
+            var windowHeight = window.innerHeight;
+            var scrollY = window.scrollY / windowHeight;
+
+            // Adjust the top position based on the scroll position
+            letterContent.style.top = 50 + scrollY + '%';
+        });
+    </script>
+
+</body>
+</html>
