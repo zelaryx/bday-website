@@ -108,6 +108,13 @@
     color: black;
     margin-bottom: 40px;
   }
+    .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   .clicky-image {
     max-width: 100%;
     height: auto;
