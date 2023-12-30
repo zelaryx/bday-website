@@ -65,7 +65,7 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-input, select, textarea {
+input, select, textarea, input {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
@@ -139,7 +139,7 @@ input, select, textarea {
 
 		}
 
-	body, input, select, textarea {
+	body, input, select, textarea, input {
 		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
@@ -390,7 +390,7 @@ input, select, textarea {
 	input[type="email"],
 	input[type="tel"],
 	select,
-	textarea {
+	textarea, input {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -418,6 +418,9 @@ input, select, textarea {
 		textarea:invalid {
 			box-shadow: none;
 		}
+		input:invalid {
+			box-shadow: none;
+		}
 
 		input[type="text"]:focus,
 		input[type="password"]:focus,
@@ -425,6 +428,11 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
+			background: rgba(255, 255, 255, 0.075);
+			border-color: #ffffff;
+			box-shadow: 0 0 0 1px #ffffff;
+		}
+		input:focus {
 			background: rgba(255, 255, 255, 0.075);
 			border-color: #ffffff;
 			box-shadow: 0 0 0 1px #ffffff;
@@ -461,6 +469,9 @@ input, select, textarea {
 	}
 
 	textarea {
+		padding: 0.75rem 1rem;
+	}
+	input {
 		padding: 0.75rem 1rem;
 	}
 
