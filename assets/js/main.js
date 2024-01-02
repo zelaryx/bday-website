@@ -53,6 +53,27 @@ function checkPassword() {
 	});
 }
 
+function toggleCoupon1(checkbox) {
+
+	if (checkbox.checked) {
+		var passwordInput = document.getElementById("coupon5").value;
+		if (passwordInput === "1234") {
+			document.getElementById("mystery-content-1").style.transform = "rotateY(180deg)";
+			document.getElementById("coupon5").style.color = "white";
+		} else {
+			// Display error message
+			document.getElementById("coupon5").style.color = "red";
+			checkbox.checked = false;
+		}
+
+	  } else {
+		document.getElementById("mystery-content-1").style.transform = "rotateY(0deg)";
+		console.log("Checkbox is unchecked!");
+		var inputElement = document.getElementById("coupon5");
+		inputElement.value = "";
+	  }
+}
+
 (function($) {
 
 	var	$window = $(window),
