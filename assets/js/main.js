@@ -94,6 +94,7 @@ function toggleCoupon1(checkbox) {
 			document.getElementById("coupon5").style.color = "white";
 		} else {
 			// Display error message
+			if(passwordInput.length > 5) alert("it should be easy to type...");
 			document.getElementById("coupon5").style.color = "red";
 			checkbox.checked = false;
 		}
