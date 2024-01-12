@@ -4,6 +4,38 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+function togglePatternContainer() {
+    var birthdayCake = document.getElementById("birthdayCake");
+    var patternContainer = document.getElementById("patternContainer");
+
+    // Toggle visibility of the pattern container
+    if (birthdayCake.style.display !== "none") {
+        birthdayCake.style.display = "none";
+        patternContainer.style.display = "grid";
+    } else {
+        birthdayCake.style.display = "inline-block";
+        patternContainer.style.display = "none";
+    }
+}
+
+var clickedSquares = [];
+
+function checkPattern(squareNumber) {
+clickedSquares.push(squareNumber);
+
+if (clickedSquares.length === 4) {
+	if (JSON.stringify(clickedSquares) === JSON.stringify([1, 4, 3, 2])) {
+	alert("Pattern correct!\n red, green, blue, yellow, orange, purple");
+	togglePatternContainer()
+	} else {
+	alert("Incorrect pattern. Try again.");
+	}
+
+	// Reset the clicked squares array for the next attempt
+	clickedSquares = [];
+}
+}
+
 document.addEventListener('DOMContentLoaded', function () {
             var clickyImage = document.querySelector('.clicky-image');
 
@@ -12,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					'images/ur-sexy.jpg',
 					'images/festive.jpg',
 					'images/skydiving.jpg',
-					'images/clue.png'
+					'images/clue.jpeg'
 			];
 
 			var idx = 1;
@@ -42,7 +74,7 @@ function checkPassword() {
 		var passwordInput = document.getElementById("password").value;
 
 		// Check if the password is correct (you can replace "yourpassword" with the actual correct password)
-		if (passwordInput === "test") {
+		if (passwordInput === "041523") {
 			// Redirect to another page
 			window.location.href = "success.html";
 		} else {
@@ -57,7 +89,7 @@ function toggleCoupon1(checkbox) {
 
 	if (checkbox.checked) {
 		var passwordInput = document.getElementById("coupon5").value;
-		if (passwordInput === "1234") {
+		if (passwordInput === "24!!!") {
 			document.getElementById("mystery-content-1").style.transform = "rotateY(180deg)";
 			document.getElementById("coupon5").style.color = "white";
 		} else {

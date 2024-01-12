@@ -300,6 +300,33 @@ input, select, textarea, input {
 		text-align: right;
 	}
 
+/* cake */
+.pattern-container {
+	width: 70%;
+  	height: 70%;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	display: none;
+}
+
+.pattern-square {
+	width: 20px;
+	height: 20px;
+	background-color: #3498db;
+	cursor: pointer;
+	margin: auto;
+	transition: all 0.3s ease;
+}
+
+.pattern-square:hover {
+	transform: scale(0.9);
+}
+
 /* Form */
 
 	form {

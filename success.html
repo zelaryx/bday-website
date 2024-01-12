@@ -1,15 +1,195 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <title>SUCCESS!</title>
+</head>
+<body>
+
+    <h1>YAY YOU GOT IT!!!</h1>
+
+    <a href="http://jerrychang.me/" target="_blank" rel="noopener noreferrer">click here for your gift.</a>
+
+    <br><br><a href="index.html#">Back</a>
+
+</body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greetings</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #fcd5d5;
+        }
+
+        .content {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+    <script>
+        // Confetti.js - https://github.com/mathusummut/confetti.js
+        (function() {
+            var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, xpos;
+
+            NUM_CONFETTI = 350;
+            COLORS = [[85, 71, 106], [174, 61, 99], [219, 56, 83], [244, 92, 68], [248, 182, 70]];
+
+            PI_2 = 2 * Math.PI;
+
+            canvas = document.getElementById("confetti-container");
+
+            context = canvas.getContext("2d");
+
+            window.w = canvas.width = window.innerWidth;
+
+            window.h = canvas.height = window.innerHeight;
+
+            range = function(a, b) {
+                return (b - a) * Math.random() + a;
+            };
+
+            drawCircle = function(x, y, r, style) {
+                context.beginPath();
+                context.arc(x, y, r, 0, PI_2, false);
+                context.fillStyle = style;
+                return context.fill();
+            };
+
+            xpos = 0.5;
+
+            document.addEventListener("mousemove", function(e) {
+                return xpos = e.pageX / w;
+            });
+
+            window.addEventListener("resize", function() {
+                return (w = canvas.width = window.innerWidth);
+            });
+
+            Confetti = (function() {
+                function Confetti() {
+                    this.style = COLORS[~~range(0, 5)];
+                    this.rgb = `rgba(${this.style[0]},${this.style[1]},${this.style[2]}`;
+                    this.r = ~~range(2, 6);
+                    this.r2 = 2 * this.r;
+                    this.replace();
+                }
+
+                Confetti.prototype.replace = function() {
+                    this.opacity = 0;
+                    this.dop = 0.03 * range(1, 4);
+                    this.x = range(-this.r2, w - this.r2);
+                    this.y = range(-20, h - this.r2);
+                    this.xmax = w - this.r;
+                    this.ymax = h - this.r;
+                    this.vx = range(0, 2) + 8 * xpos - 5;
+                    return (this.vy = 0.7 * this.r + range(-1, 1));
+                };
+
+                Confetti.prototype.draw = function() {
+                    var ref;
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    this.opacity += this.dop;
+                    if (this.opacity > 1) {
+                        this.opacity = 1;
+                        this.dop *= -1;
+                    }
+                    if (this.opacity < 0 || this.y > this.ymax) {
+                        this.replace();
+                    }
+                    if (0.1 > (ref = this.x) && ref > -0.1) {
+                        this.vx = -this.vx;
+                    }
+                    if (this.x > this.xmax) {
+                        this.x = this.xmax;
+                        this.vx *= -1;
+                    }
+                    return drawCircle(~~this.x, ~~this.y, this.r, `${this.rgb},${this.opacity})`);
+                };
+
+                return Confetti;
+            })();
+
+            confetti = (function() {
+                var j, ref, results;
+                results = [];
+                for (
+                    i = j = 1, ref = NUM_CONFETTI;
+                    1 <= ref ? j <= ref : j >= ref;
+                    i = 1 <= ref ? ++j : --j
+                ) {
+                    results.push(new Confetti());
+                }
+                return results;
+            })();
+
+            window.step = function() {
+                var c, j, len, results;
+                requestAnimationFrame(step);
+                context.clearRect(0, 0, w, h);
+                results = [];
+                for (j = 0, len = confetti.length; j < len; j++) {
+                    c = confetti[j];
+                    results.push(c.draw());
+                }
+                return results;
+            };
+
+            step();
+        }.call(this));
+
+        function showGift() {
+            window.location.href = 'http://jerrychang.me/';
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </head>
 <body>
-
-    <h1>Hi</h1>
-
-    <a href="index.html#">Back</a>
-
+    <div id="confetti-container"></div>
+    <div class="content">
+        <h1>Yay, You Got It!</h1>
+        <div class="buttons">
+            <button onclick="showGift()">Click here for your gift</button>
+            <button onclick="goBack()">Back</button>
+        </div>
+    </div>
 </body>
 </html>
